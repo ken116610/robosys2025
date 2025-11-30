@@ -9,18 +9,19 @@ ng () {
 
 res=0
 
-out=$(seq 5 | ./plus)
 
-[ "${out}" = 15 ] || ng $LINRNO
+out=$(seq 5 | ./numstat)
+expected=$'count 5\nsum 15\nmin 1\nmax 5\nmean 3'
+[ "$out" = "$expected" ] || ng "$LINENO"
 
-out=$(echo あ | ./plus)
-[ "$?" = 1 ]      || ng "$LINENO"
-[ "${out}" = "" ] || ng "$LINENO"
+out=$(echo あ | ./numstat)
+[ "$?" = 1 ]    || ng "$LINENO"
+[ "$out" = "" ] || ng "$LINENO"
 
-out=$(echo | ./plus)
-[ "$?" = 1 ]      || ng "$LINENO"
-[ "${out}" = "" ] || ng "$LINENO"
+out=$(echo -n "" | ./numstat)
+[ "$?" = 1 ]    || ng "$LINENO"
+[ "$out" = "" ] || ng "$LINENO"
 
 [ "$res" = 0 ] && echo OK
-exit $res
+exit "$res"
 
