@@ -29,12 +29,12 @@ numstatは、標準入力から読み込んだ数値を
 seqの後に値を入れてあげる。
 例えば、
 初回のみ $ chmod +x numstat
-$ seq 5 | ./numstat
-count 5
-sum 15
-min 1
-max 5
-mean 3
+- $ seq 5 | ./numstat
+- count 5
+- sum 15
+- min 1
+- max 5
+- mean 3
 
 入力は、空白や改行で区切られた数値であれば、１行に複数書いてあってもかまいません。整数でも少数のどちらにも対応しています。
 また、数字以外の文字が含まれている場合や、入力が空白の場合はエラーとして終了しステータス１を返します。
@@ -42,25 +42,25 @@ mean 3
 
 動作環境
 
-Ubuntu 22.04 WSL2 上のUbuntuで動作確認
-Python3系
+- Ubuntu 22.04 WSL2 上のUbuntuで動作確認
+- Python3系
 
 
 インストール方法
 
 GitHub からリポジトリを取得して、実行権限を付けます。
 
-git clone git@github.com:ken116610/robosys2025.git
-cd robosys2025
-chmod +x numstat
+- git clone git@github.com:ken116610/robosys2025.git
+- cd robosys2025
+- chmod +x numstat
 
 
 テスト方法
 
 リポジトリにはtest.bashによるリグレッションテストを用意しています。
 
-$ chmod +x test.bash
-$ ./test.bash
+- $ chmod +x test.bash
+- $ ./test.bash
 
 を実行したときにOKと表示され、終了ステータスが０であればテストは成功です。
 
@@ -69,8 +69,8 @@ $ ./test.bash
 
 各スクリプトの先頭には、次のようなSPDX表記をつけています。
 
-SPDX-FileCopyrightText: 2025 Yuken Ro
-SPDX-License-Identifier: GPT-3.0-only
+- SPDX-FileCopyrightText: 2025 Yuken Ro
+- SPDX-License-Identifier: GPT-3.0-only
 
 
 このリポジトリとGPTについて 
