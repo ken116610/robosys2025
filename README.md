@@ -33,11 +33,11 @@ $ echo 7 | ./stone
 石言葉: 情熱, 良縁, 勝利
 ```
 ### 失敗例
+文字を入力した場合このようなエラーが表示される
 ```
 $ echo a | ./stone
 Error: month must be digits
 ```
-文字を入力した場合このようなエラーが表示される
 
 ## 動作環境
 Ubuntu 22.04 LTS\
