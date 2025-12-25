@@ -1,0 +1,41 @@
+#!/usr/bin/python3
+# SPDX-FileCopyrightText: 2025 Yuken Ro
+# SPDX-License-Identifier: GPT-3.0-only
+
+import sys
+
+stones = {
+        1:  ("ガーネット", "真実, 忠実, 友愛"),
+        2:  ("アメジスト", "誠実, 心の平和, 知性"),
+        3:  ("アクアマリン", "幸福, 聡明, 勇敢"),
+        4:  ("ダイヤモンド", "永遠の愛, 純潔, 不屈"),
+        5:  ("エメラルド", "幸運, 希望, 愛情"),
+        6:  ("パール", "純粋, 純粋, 富, 健康"),
+        7:  ("ルビー", "情熱, 良縁, 勝利"),
+        8:  ("ペリドット", "夫婦愛, 幸福, 和合"),
+        9:  ("サファイア", "誠実, 慈愛, 徳望"),
+        10: ("オパール", "歓喜, 希望, 幸運"),
+        11: ("トパーズ", "純粋, 希望, 誠実"),
+        12: ("ターコイズ", "強運, 繁栄, 旅の安全"),
+}
+
+x = sys.stdin.read().strip().split()
+
+if len(x) != 1:
+    print("Error: input a single number", file=sys.stderr)
+    sys.exit(1)
+
+if not x[0].isdigit():
+    print("Error: month must be digits", file=sys.stderr)
+    sys.exit(1)
+
+month = int(x[0])
+if month < 1 or month > 12:
+    print("Error: month must be 1-12", file=sys.stderr)
+    sys.exit(1)
+
+stone, word = stones[month]
+print(str(month) + "月: " + stone)
+print("石言葉: " + word)
+
+
