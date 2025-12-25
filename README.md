@@ -1,5 +1,5 @@
 # stoneコマンド　誕生石と石言葉
-![test](https://github.com/YukenRo/robosys2025/actions/workflows/test.yml/badge.svg)
+![test](https://github.com/ken116610/robosys2025/actions/workflows/test.yml/badge.svg)
 
 ## 目次
 1[コマンド説明]\
